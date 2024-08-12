@@ -114,7 +114,7 @@ function displayStringResult(resultText) {
     let resultBox = document.getElementById('string-result');
     let result = document.createElement('div');
     result.textContent = resultText;
-    // removes the content of list array
+    // inserts/replaces the content of string result array
     if (resultBox) {
         resultBox.appendChild(result);
     }
