@@ -33,10 +33,19 @@
 </div>
 
 
-<input id="add">
-<button onclick="sayHello(document.getElementById('add').value)">Add</button>
-<div id="myList">
-
+<div id="ISBN-section">
+    <h1>ISBN Validator</h1>
+    <input id="isbn-input">
+    <button onclick="validateISBN(document.getElementById('isbn-input').value)">Validate ISBN Code</button>
 </div>
+
+<div id="string-change-section">
+    <h1>Change it up!</h1>
+    <input id="string-input">
+    <button onclick="changeString(document.getElementById('string-input').value)">Change it up!</button>
+    <div id ="string-result"></div>
+</div>
+
+
 <script> var exports = {"__esModule": { value: true}}</script>
 <script src="./index.js"></script>
