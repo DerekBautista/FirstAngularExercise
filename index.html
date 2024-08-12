@@ -1,0 +1,42 @@
+<div id="city-section">
+    <h1>City Directory</h1>
+    <div id="city-form">
+
+        <div>
+            City Name:
+            <input type="text" id="city">
+        </div>
+
+        <div>
+            Country:
+            <input type="text" id="country">
+        </div>
+
+        <div>
+            Population:
+            <input type="number" id="population">
+        </div>
+
+        <div class="city-button">
+            <button onclick="displayCity(document.getElementById('city').value, document.getElementById('country').value, document.getElementById('population').value)">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div id ="city-search-box">
+        <h2>City search</h2>
+            <input type="text" id="search-input">
+            <button onclick="searchCity(document.getElementById('search-input').value)">Search</button>
+    </div>
+    <div id ="city-list"></div>
+</div>
+
+
+<input id="add">
+<button onclick="sayHello(document.getElementById('add').value)">Add</button>
+<div id="myList">
+
+</div>
+<script> var exports = {"__esModule": { value: true}}</script>
+<script src="./index.js"></script>
