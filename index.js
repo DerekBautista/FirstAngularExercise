@@ -59,6 +59,7 @@ const searchCity = (keyword) => {
     (0, exports.displayFilteredCity)(filteredLocations);
 };
 exports.searchCity = searchCity;
+//========================== ISBN ===============================
 const validateISBN = (code) => {
     console.log(`${code} -> ${(0, exports.isValidCode)(code)}`);
 };
@@ -84,6 +85,7 @@ const isValidCode = (code) => {
     return true;
 };
 exports.isValidCode = isValidCode;
+//========================== Change it up! ===============================
 const changeString = (word) => {
     word = word.toLowerCase();
     console.log(word);
@@ -123,4 +125,30 @@ function isVowel(c) {
     if (c === "a" || c === "e" || c === "i" || c === "o" || c === "u")
         return true;
     return false;
+}
+const nonZeros = [];
+const zeros = [];
+let array = [];
+
+//====================================Move Zeros to the end===========================
+function moveZeros(array) {
+    for (let element of array) {
+        if (element === 0 || element === '0') {
+            zeros.push(element);
+        }
+        else {
+            nonZeros.push(element);
+        }
+    }
+    let i = 0;
+    for (let nonzero of nonZeros) {
+        array[i] = nonzero;
+        i++;
+    }
+    for (let zero of zeros) {
+        array[i] = zero;
+        i++;
+    }
+
+    console.log(array)
 }

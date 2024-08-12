@@ -71,6 +71,8 @@ export const searchCity = (keyword:string) => {
     displayFilteredCity(filteredLocations)
 }
 
+//========================== ISBN ===============================
+
 export const validateISBN = (code:string) => {
     console.log(`${code} -> ${isValidCode(code)}`)
 }
@@ -98,6 +100,7 @@ export const isValidCode = (code:string) =>{
     return true
 }
 
+//========================== Change it up! ===============================
 export const changeString = (word:String) => {
     word = word.toLowerCase()
     console.log(word)
@@ -141,4 +144,34 @@ function isVowel (c:string){
     if(c === "a" || c === "e" || c ==="i" || c ==="o" || c === "u")
         return true
     return false
+}
+
+
+
+
+
+const nonZeros:any[] = [];
+const zeros:any[] = [];
+let array:any[] = []
+
+function moveZeros(array:any[]){
+    for(let element of array){
+        if(element === 0 || element === '0'){
+            zeros.push(element);
+        }
+        else{
+            nonZeros.push(element);
+        }
+    }
+    
+    let i = 0;
+    for(let nonzero of nonZeros){
+        array[i] = nonzero
+        i++
+    }
+
+    for(let zero of zeros){
+        array[i] = zero
+        i++
+    }
 }
